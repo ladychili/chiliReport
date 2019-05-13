@@ -1,0 +1,68 @@
+---
+title: "Report Title"
+subtitle: "subtitle"
+author: "name"
+date: "01/01/2019"
+output:
+  pdf_document:
+    toc: yes
+    extra_dependencies: subfig
+    fig_caption: yes
+    includes: null
+    keep_tex: yes
+    latex_engine: xelatex
+    number_sections: yes
+header-includes:
+ \usepackage{booktabs}
+ \usepackage{longtable}
+ \usepackage{array}
+ \usepackage{enumitem} 
+ \usepackage{multirow}
+ \usepackage[table]{xcolor}
+ \usepackage{wrapfig}
+ \usepackage{float}
+ \floatplacement{figure}{H}
+ \usepackage[bottom]{footmisc}
+bibliography: reference.bib
+csl: harvard.csl
+nocite: | 
+  @r, @tidyverse
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      include = TRUE,
+                      message = FALSE)
+
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+options(kableExtra.latex.load_packages = FALSE,
+        knitr.kable.NA = '-')
+```
+
+*I conﬁrm that the following report and associated code is my own work, except where clearly indicated.*
+
+# Introduction
+
+Introduce the work here
+
+# Conclusion
+
+Conclude the report here
+
+\newpage
+# Reference
+
+<div id="refs"></div>
+
+# Appendix
+
+## R code
+
+```{r, ref.label=knitr::all_labels(),echo=TRUE,eval=FALSE}
+ #directly quote all the code
+```
+
+

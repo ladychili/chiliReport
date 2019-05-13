@@ -1,0 +1,10 @@
+Package: chiliReport
+Type: Package
+Title: An Rmarkdown Template for student report
+Version: 0.1.0
+Author: ladychili
+Maintainer: zqt0@outlook.com
+Description: An rmarkdown template for pdf report
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
